@@ -193,54 +193,6 @@ All Phase III trials are largely similar to this:
 
 ---
 
-## What is the most relevant endpoint?
-
-.pull-left[
-
-&lt;img src="img/endpt1.png" height="275px" style="display: block; margin: auto;" /&gt;
-
-]
-
-.pull-right[
-
-&lt;img src="img/endpt2.png" height="275px" style="display: block; margin: auto;" /&gt;
-
-]
-
-&lt;br&gt;
-
-.small[From Mehrorta et al (2020+), under revision.]
-
----
-
-## What is the most relevant endpoint?
-
-__SARS-CoV-2 infection__
-* .blue2[+] relevant to stemming spread, many infections will be observed
-* .red[-] clinically relevant? measured coarsely in time; many false positives
-
-__COVID__
-* .blue2[+] more clinically relevant, reasonable number of cases expected
-* .red[-] clinically relevant if symptoms are mild?
-
-__Severe COVID__
-* .blue2[+] most clinically relevant
-* .red[-] very few cases expected to be observed
-
----
-
-## What is the most relevant endpoint?
-
-[FDA guidance](https://www.fda.gov/media/139638/download) (pg. 13) states __either COVID or SARS-CoV-2 infection__ is an acceptable primary endpoint.
-  *  OWS guidance to companies has been that __infection alone__ is __not acceptable__ as primary endpoint. 
-
-&lt;br&gt; 
-
-FDA guidance states companies, "should consider __powering efficacy trials__ for formal hypothesis testing on a __severe COVID endpoint__ [or] evaluate as a __secondary endpoint__."
-  * Only Janssen so far is powering for severe COVID as primary.
-
----
-
 ## What is primary hypothesis test?
 
 Vaccine efficacy, `\(\text{VE}\)`, is the __percent reduction in relative risk__ comparing vaccine to placebo. 
@@ -249,10 +201,9 @@ $$
 \text{VE} = 1 - \frac{\text{“risk” in vaccine}}{\text{“risk” in placebo}}
 $$
 
-* `\(\text{“risk”}\)` could be based on hazard, cumulative incidence, incidence rate, ...
+* `\(\text{“risk”}\)` of what? See next slides.
+* `\(\text{“risk”}\)` quantified by hazard, cumulative incidence, incidence rate, ...
   * in rare event setting, all similar
-
-&lt;br&gt; 
 
 [FDA guidance](https://www.fda.gov/media/139638/download) (pg. 14) stipulates: 
 * a point estimate of `\(\text{VE}\)` for the primary endpoint of at
@@ -274,6 +225,56 @@ least 50% __and__
 &lt;br&gt; 
 
 Simulation studies showed __little difference in power__ across approaches. 
+
+---
+
+## What is the most relevant endpoint?
+
+&lt;img src="img/endpt.png" height="400px" style="display: block; margin: auto;" /&gt;
+
+&lt;br&gt;
+
+.small[from Mehrotra et al doi: [10.7326/M20-6169](https://www.doi.org/10.7326/M20-6169)]
+
+---
+
+## What is the most relevant endpoint?
+
+__SARS-CoV-2 infection__
+* .blue2[+] relevant to stemming spread, many infections will be observed
+* .red[-] clinically relevant? measured coarsely in time; many false positives
+
+__COVID__
+* .blue2[+] more clinically relevant, reasonable number of cases expected
+* .red[-] clinically relevant if symptoms are mild?
+
+__Severe COVID__
+* .blue2[+] most clinically relevant, a-priori highest expected efficacy
+* .red[-] very few cases expected to be observed, longer evaluation needed
+
+---
+
+## What is the most relevant endpoint?
+
+__Burden of disease (BOD)__
+* .blue2[+] more clinically relevant than COVID
+* .blue2[+] lower power for .red[vaccines of questionable benefit]
+* .blue2[+] power at least as high as COVID for .blue1[likely vaccine profiles]
+* .red[-] best way to assign burden score? treating ordinal as continuous 🤷‍♂️
+
+&lt;img src="img/bodpower.png" height="250px" style="display: block; margin: auto;" /&gt;
+
+---
+
+## What is the most relevant endpoint?
+
+[FDA guidance](https://www.fda.gov/media/139638/download) (pg. 13) states __either COVID or SARS-CoV-2 infection__ is an acceptable primary endpoint.
+  *  OWS guidance to companies has been that __infection alone__ is __not acceptable__ as primary endpoint. 
+
+&lt;br&gt; 
+
+FDA guidance states companies, "should consider __powering efficacy trials__ for formal hypothesis testing on a __severe COVID endpoint__ [or] evaluate as a __secondary endpoint__."
+  * Only Janssen so far is powering for severe COVID as primary.
 
 ---
 
@@ -301,7 +302,7 @@ In response to __criticism about stopping too early__, I .red[think] that prior 
 * OBF = very conservative early, saves `\(\alpha\)` for final
 * PCK = more aggressive early, less `\(\alpha\)` left for final
 
-&lt;img src="img/bounds-plot-1.png" height="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="img/bounds-plot-1.png" height="300px" style="display: block; margin: auto;" /&gt;
 
 .small[Analysis of Pfizer stopping bounds available on [GitHub](https://github.com/benkeser/pfizerbounds).]
 
