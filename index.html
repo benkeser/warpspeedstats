@@ -49,7 +49,7 @@ Pfizer (mRNA)
 .pull-right[.center[
 .blue2[+] Quick manufacturing
 
-.blue2[+] No cold chain required
+.red[-] Potentially challenging cold chain
 
 .red[-] Never been approved before
 ]]
@@ -66,15 +66,17 @@ Figures again borrowed from WaPo. See also the [Nature news article](https://www
 .pull-left[.center[
 __Examples__: 
 
-AstraZeneca (chimpanzee adenovirus)
+AstraZeneca (chimp adeno)
 
-Janssen (human adenovirus)
+Janssen (human adeno)
 ]]
 
 .pull-right[.center[
 .blue2[+] Quick manufacturing
 
-.red[-] Can develop immunity against vector 
+.red[-] Immunity against vector 
+
+.red[-] Unintentional effects on &lt;a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)32156-5/fulltext"&gt; HIV risk&lt;/a&gt;?
 ]]
 
 ---
@@ -118,22 +120,6 @@ Sinovac
 
 .red[-] Often require an adjuvant
 ]]
-
----
-
-## Vaccine development process
-
-&lt;img src="img/nejmvaxprocess.png" height="450px" style="display: block; margin: auto;" /&gt;
-
-.small[from Lurie et al. doi: [10.1056/NEJMp2005630](https://doi.org/10.1056/NEJMp2005630) ]
-
----
-
-## Vaccine development process
-
-&lt;img src="img/vaxtimeline.png" height="450px" style="display: block; margin: auto;" /&gt;
-
-.small[from [Washington Post](https://www.washingtonpost.com/graphics/2020/health/covid-vaccine-update-coronavirus/)]
 
 ---
 
@@ -276,84 +262,20 @@ __Burden of disease (BOD)__
 FDA guidance states companies, "should consider __powering efficacy trials__ for formal hypothesis testing on a __severe COVID endpoint__ [or] evaluate as a __secondary endpoint__."
   * Only Janssen so far is powering for severe COVID as primary.
 
+
 ---
+class: inverse, center, middle
 
-## How is `\(\text{VE}\)` being monitored?
-
-|__Company__ | __Endpoints__ | `\(\alpha\)`__-adj.__* | __Success__ |
-|:-----------|:--------------------------------------------|
-|Pfizer      | 32, 62, 92, 120, 164 | PCK | `\(P(\text{VE} &gt; 30 \mid \text{data}) &gt; 0.995/0.986\)` |
-|Moderna     |35, 106, 151 | OBF | Reject `\(H_0: \text{VE} &lt;30\)`   |
-|AZ          |75, 150 | OBF | Reject `\(H_0: \text{VE} &lt;30\)` |
-|Janssen     |20 + weekly | PCK | Reject `\(H_0: \text{VE} &lt;30\)` |
-\* .small[alpha-spending function: OBF = O'Brien Fleming-like; PCK = Pocock-like]
-
-In response to __criticism about stopping too early__, I .red[think] that prior to an EUA, companies now must have:
-
-* 50% of participants complete two months of follow-up;
-* at least 6 COVID cases in `\(\ge\)` 60 age group; and
-* at least 5 cases of severe COVID.
-
+.huge[Results (so far)]
 
 ---
 
-## How is `\(\text{VE}\)` being monitored?
+## Placeholder
 
-* OBF = very conservative early, saves `\(\alpha\)` for final
-* PCK = more aggressive early, less `\(\alpha\)` left for final
-
-&lt;img src="img/bounds-plot-1.png" height="300px" style="display: block; margin: auto;" /&gt;
-
-.small[Analysis of Pfizer stopping bounds available on [GitHub](https://github.com/benkeser/pfizerbounds).]
+A table summarizing Phase III trial results so far (Pfizer, Moderna, AZ)
 
 ---
 
-## What if efficacy declared early?
-
-Reasons to __feel good__: 
-
-* vaccine available sooner, at least for most vulnerable
-* based on the data, there's a good chance vaccine works well
-
-Posterior based on 32 cases (26:6 placebo:vax) and a very skeptical prior.
-
-.pull-left[
-
-&lt;img src="img/posterior.png" height="250px" style="display: block; margin: auto;" /&gt;
-
-]
-
-.pull-right[
-
-| `\(x\)` | `\(P(\text{VE} &gt; x \mid \text{data})\)` |
-|:----|:---------------------:|
-| 0.3 | 1.00                  |
-| 0.5 | 0.97                  |
-| 0.7 | 0.65                  | 
-| 0.8 | 0.25                  | 
-| 0.9 | 0.01                  | 
-
-]
-
----
-
-## What if efficacy declared early?
-
-Reasons to __feel bad__:
-
-* if blinded follow-up stops
-  * no way to assess durability
-  * underpowered to assess VE in subgroups 
-  * underpowered to assess VE against severe COVID
-* if active-control/non-inferiority trials become necessary
-  * huge sample sizes required
-* if political pressure played a role in granting an EUA
-
-&lt;br&gt; 
-
-Personally, I believe the .red[the worst outcome] is an __only-moderately-effective vaccine__ being granted an EUA and blinded follow-up being discontinued. 
-
----
 class: inverse, center, middle
 
 .huge[Vaccine correlates]
@@ -387,9 +309,9 @@ In effect:
 
 ## Measuring correlates
 
-Running assays on &gt;30,000 blood draws is timely, expensive, and, as it turns out, statistically unnecessary.
+Running assays on &gt;30k samples is .red[expensive] and __statistically unnecessary__.
 
-Instead we measure immune responses in:
+Instead we __measure immune responses__ in:
 
 * a stratified random subcohort (\~1600 individuals)
 * all SARS-CoV-2 and COVID endpoints
@@ -397,7 +319,14 @@ Instead we measure immune responses in:
 This is a __case-cohort design__ ([Prentice, 1986](https://www.jstor.org/stable/2336266?seq=1)), a special case of a __two-phase sampling design__ ([Breslow, 2009](https://academic.oup.com/aje/article/169/11/1398/159218)).
 
 * Phase 1: measure baseline variables, vaccine, endpoint __on everyone__
-* Phase 2: given baseline, vaccine, endpoint, select members of __immune response subcohort__ with (known) probability
+* Phase 2: given baseline, vaccine, endpoint, select members of __immune response subcohort__ with some (known) probability
+
+---
+
+## Placeholder
+
+A slide with high-level heuristics about correlates: 
+* causal sufficiency, causal mediation
 
 ---
 
@@ -433,11 +362,11 @@ It turns out that consistency of `\(\hat{\mu}\)` is not impacted by model for `\
 
 ## Estimation in two-phase designs
 
-This augmented approach generalizes to a whole class of parameters ([Rose and van der Laan, 2011](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3083136/)). For example, in [Hejazi et al, 2020](https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.13375?af=R) we study $$
-\psi_{\delta} = \iint P(Y = 1 \mid A = 1, w, s + \delta) \ f_S(s \mid A = 1, w) \ f_W(w) \ ds \ dw \ . 
+This augmented approach [generalizes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3083136/). In [Hejazi et al, 2020](https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.13375?af=R) we study $$
+\psi_{\delta} = E[P(Y = 1 \mid A = 1, W, S = S + \delta)] \ .
 $$
 
-Under assumptions, `\(\psi_{\delta}\)` = counterfactual risk of COVID if given vaccine AND a `\(\delta\)` unit increase to immune response `\(S\)`. 
+With assumptions, `\(\psi_{\delta}\)` = __counterfactual risk__ with vaccine AND `\(\delta\)` change in `\(S\)`. 
 
 .pull-left[
 
@@ -447,49 +376,31 @@ Under assumptions, `\(\psi_{\delta}\)` = counterfactual risk of COVID if given v
 
 .pull-right[
 
-* examine over a range of `\(\delta\)`
+* examine over a range of `\(\delta\)` and summarize by projecting onto working model
 
-* can summarize trend using projection onto working model
-
-* compare to risk in placebo for controlled effects mediation parameter
+* compare to risk in placebo for controlled effects-type parameter
 
 ]
 
 ---
 
-## Current status
+## Placeholder
 
-The goal is to have correlates analysis as soon as possible after efficacy is declared for a Phase III trial. 
+Challenges for correlates in face of highly effective vaccines
+* low case numbers, stability of estimators?
 
-&lt;br&gt; 
-
-CoVPN stat group is preparing a __unified correlates analysis plan__. 
-
-* will be publicly available for comment soon
-* reproducible, automated reports
-
-&lt;br&gt; 
-
-Where possible, we try to make use of __targeted learning approaches__.
-
-* flexible, pre-specified regression using super learner
-* combined with efficient, robust estimators
+Establishment of correlate will have to draw from NHP studies, natural infection data, other sources.
 
 ---
 
-## Conclusions
+## Placeholder
 
-From where I sit, the __science__ behind the development and evaluation of preventive COVID-19 vaccines __is rigorous__. 
-* Chest-thumping from politicians and CEOs aside...
-
-&lt;br&gt; 
-
-The __increased transparency__ via releasing of the protocols is a __good thing__ for scientists and consumers. 
-
-&lt;br&gt; 
-
-There are __challenging decisions__ that need to be made in the design of these trials. There are __no right answers__. 
-* Academics should take care to acknowledge this in public discourse.
+Topics for discussion/open questions:
+* Durability -- will we be able to continue blinded, placebo-controlled follow-up
+  * I'm basically hearing the answer is "No!"
+* Long term safety -- people still seem skeptical of mRNA vaccines wrt long term outcomes
+* Bridging to children
+* Importance of VE against infection
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
