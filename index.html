@@ -27,101 +27,6 @@ class: center, middle, inverse, title-slide
 }
 &lt;/style&gt;
 
-## SARS-CoV-2 Infection
-
-&lt;img src="img/sarscov2infection.png" height="450px" style="display: block; margin: auto;" /&gt;
-
-.small[from [Washington Post](https://www.washingtonpost.com/graphics/2020/health/covid-vaccine-update-coronavirus/)]
-
----
-
-## Nucleic acid vaccines
-
-&lt;img src="img/nucleicacidvax.png" height="300px" style="display: block; margin: auto;" /&gt;
-.pull-left[.center[
-__Examples__: 
-
-Moderna (mRNA)
-
-Pfizer (mRNA)
-]]
-
-.pull-right[.center[
-.blue2[+] Quick manufacturing
-
-.red[-] Potentially challenging cold chain
-
-.red[-] Never been approved before
-]]
-
-???
-
-Figures again borrowed from WaPo. See also the [Nature news article](https://www.nature.com/articles/d41586-020-01221-y) about COVID vaccines. 
-
----
-
-## Viral-vectored vaccines
-
-&lt;img src="img/viralvectorvax.png" height="300px" style="display: block; margin: auto;" /&gt;
-.pull-left[.center[
-__Examples__: 
-
-AstraZeneca (chimp adeno)
-
-Janssen (human adeno)
-]]
-
-.pull-right[.center[
-.blue2[+] Quick manufacturing
-
-.red[-] Immunity against vector 
-
-.red[-] Unintentional effects on &lt;a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(20)32156-5/fulltext"&gt; HIV risk&lt;/a&gt;?
-]]
-
----
-
-## Subunit vaccines
-
-&lt;img src="img/subunitvax.png" height="300px" style="display: block; margin: auto;" /&gt;
-.pull-left[.center[
-__Examples__: 
-
-NovaVax
-
-Sanofi Pasteur/GSK 
-]]
-
-.pull-right[.center[
-.blue2[+] Construct of several effective vaccines (hep B, HPV, ...)
-
-.red[-] Slower manufacturing
-
-.red[-] Often require an adjuvant
-]]
-
----
-
-## Weakened/inactivated vaccines
-
-&lt;img src="img/inactivevax.png" height="300px" style="display: block; margin: auto;" /&gt;
-.pull-left[.center[
-__Examples__: 
-
-Sinopharm
-
-Sinovac
-]]
-
-.pull-right[.center[
-.blue2[+] Construct of several effective vaccines (MMR, polio, flu)
-
-.red[-] Slower manufacturing
-
-.red[-] Often require an adjuvant
-]]
-
----
 
 &lt;img src="img/owsprocess.jpeg" height="575px" style="display: block; margin: auto;" /&gt;
 
@@ -159,6 +64,7 @@ Two main ways companies can interface with OWS:
 ]
 
 ---
+
 class: inverse, center, middle
 
 .huge[Design and analysis]
@@ -199,28 +105,13 @@ least 50% __and__
 
 ---
 
-## How is `\(\text{VE}\)` estimated/tested?
-
-|__Company__ | __Estimation approach__                     |
-|:-----------|:--------------------------------------------|
-|Pfizer      |Bayesian beta-binomial                       |
-|Moderna     |Cox model                                    |
-|AZ          |Poisson regression model                     |
-|Janssen     |Binomial + sequential probability ratio test |
-
-&lt;br&gt; 
-
-Simulation studies showed __little difference in power__ across approaches. 
-
----
-
 ## What is the most relevant endpoint?
 
 &lt;img src="img/endpt.png" height="400px" style="display: block; margin: auto;" /&gt;
 
 &lt;br&gt;
 
-.small[from Mehrotra et al doi: [10.7326/M20-6169](https://www.doi.org/10.7326/M20-6169)]
+.small[[Mehrotra et al (2020)](https://www.doi.org/10.7326/M20-6169)]
 
 ---
 
@@ -266,13 +157,20 @@ FDA guidance states companies, "should consider __powering efficacy trials__ for
 ---
 class: inverse, center, middle
 
-.huge[Results (so far)]
+.huge[Reported results]
 
 ---
 
-## Placeholder
+## Results
 
-A table summarizing Phase III trial results so far (Pfizer, Moderna, AZ)
+|__Company__ | __VE COVID__ &lt;br&gt; __(95% CI)__ | __Cases__ &lt;br&gt; __(vax:placebo)__ | __VE Severe__ &lt;br&gt; __(95% CI)__ | __Cases__ &lt;br&gt; __(vax:placebo)__ | 
+|:-----------|:---------------------------------------:|:------------------------:|:-----------:|:----:|
+| [Pfizer/BioNTech](https://www.pfizer.com/news/press-release/press-release-detail/pfizer-and-biontech-conclude-phase-3-study-covid-19-vaccine) |  94.6 &lt;br&gt; (90.0, 97.9) | 170 &lt;br&gt; (8:162)   |  88.9 &lt;br&gt; (19.8, 99.7) | 10 &lt;br&gt; (1:9)  | 
+| [Moderna](https://investors.modernatx.com/news-releases/news-release-details/moderna-announces-primary-efficacy-analysis-phase-3-cove-study)        |  94.1 &lt;br&gt; (89.1, 97.0) | 196 &lt;br&gt; (11:185)  |  100.0 &lt;br&gt; (86.9, 100.0) | 30 &lt;br&gt; (0:30) |
+| [Oxford/](https://www.astrazeneca.com/media-centre/press-releases/2020/azd1222hlr.html) &lt;br&gt; [AstraZeneca](https://www.astrazeneca.com/media-centre/press-releases/2020/azd1222hlr.html) (low) | 90.0 &lt;br&gt; (63.9, 97.8)| 33 &lt;br&gt; (3:30)     |  100.0 &lt;br&gt; (??.?, ??.?) | ?? &lt;br&gt; (0:??) |
+| [Oxford/](https://www.astrazeneca.com/media-centre/press-releases/2020/azd1222hlr.html) &lt;br&gt; [AstraZeneca](https://www.astrazeneca.com/media-centre/press-releases/2020/azd1222hlr.html) (full) |  61.9 &lt;br&gt; (40.0, 76.5)| 98 &lt;br&gt; (27:71) |  100.0 &lt;br&gt; (??.?, ??.?) | ?? &lt;br&gt; (0:??) |
+| [Sputnik](https://clinicaltrials.gov/ct2/show/NCT04530396?term=Gam-COVID-Vac&amp;draw=2) | 91.7 &lt;br&gt; (77.7, 97.4) | 20 &lt;br&gt; (4:16) | ???.? (??.?, ??.?) | ?? &lt;br&gt; (0:??) |
+.small[__VE COVID__ reported in press releases. __CI__ roughly computed based on case splits.]
 
 ---
 
@@ -282,28 +180,87 @@ class: inverse, center, middle
 
 ---
 
-## Correlates of protection
+## Correlates of risk/protection
 
-&lt;img src="img/correlates.png" height="400px" style="display: block; margin: auto;" /&gt;
+Two, interrelated goals of correlates analysis are to 
 
-.small[From Plotkin and Gilbert, doi: [10.1093/cid/cis238](https://doi.org/10.1093/cid/cis238)]
+* identify/validate possible __surrogate endpoints__;
+* understand __protective mechanisms__ of vaccines. 
+
+If an __immune correlate__ is established to __reliably predict vaccine efficacy__, then subsequent efficacy trials may use the CoP as the __primary endpoint__. 
+
+__Accelerates approval__ of
+
+* existing vaccines in __different populations__ (e.g., children);
+* __new vaccines__ in the same class.
+
+---
+
+## Correlates of risk/protection
+
+.large[__Two levels of correlates analysis__\*:]
+
+__Correlates of risk:__
+
+* Correlation of immune response in vaccine recipients with outcome
+* Risk prediction
+* Evaluates associative parameters
+
+__Correlates of protection__
+
+* Evaluate immune response's ability to predict vaccine efficacy
+* Evaluates causal parameters
+
+&lt;br&gt; &lt;br&gt; &lt;br&gt; 
+
+.small[\* [Plotkin and Gilbert (2012)](https://doi.org/10.1093/cid/cis238), [Qin et al (2007)](https://doi.org/10.1086/522428)]
+
+---
+
+## Correlates of risk
+
+
+.pull-left[
+
+&lt;img src="img/cor1.png" height="250px" style="display: block; margin: auto;" /&gt;
+
+* Risk given immune response + baseline covariate adjustment
+* E.g., Cox model
+
+]
+
+.pull-right[
+
+&lt;img src="img/cor2.png" height="250px" /&gt;
+
+* Machine learning prediction using different sets of immune responses\*.
+
+]
+
+&lt;br&gt; &lt;br&gt; 
+
+.small[\* [Neidich et al (2019)](https://doi.org/10.1172/JCI126391)]
 
 ---
 
 ## Correlates of protection
 
-If an CoP is established to __reliably predict vaccine efficacy__, then subsequent efficacy trials may use the CoP as the __primary endpoint__. 
+__Effect modifiers of VE__
 
-Accelerates approval for: 
+* How/does VE vary across subgroups defined by immune response?
+* E.g., [Juraska et al (2020)](https://doi.org/10.1093/biostatistics/kxy074)
 
-* different populations (e.g., children, pregnant women);
-* new vaccines in the same class in same/different populations.
 
-&lt;br&gt; 
+__Mediators of VE__
 
-In effect: 
+* What percentage of VE is attributable to immune response?
+* E.g., [Cowling et al (2019)](https://doi.org/10.1093/cid/ciy759)
 
-.center[.large[__A CoP is a candidate surrogate endpoint.__]]
+
+__Stochastic interventional VE__
+
+* How/would shifting the immune response distribution impact VE?
+* [Hejazi et al (2020)](https://doi.org/10.1111/biom.13375)
 
 ---
 
@@ -311,96 +268,101 @@ In effect:
 
 Running assays on &gt;30k samples is .red[expensive] and __statistically unnecessary__.
 
-Instead we __measure immune responses__ in:
-
+Instead we use a __case-cohort design__ ([Prentice, 1986](https://www.jstor.org/stable/2336266?seq=1)) to __measure immune responses__ in 
 * a stratified random subcohort (\~1600 individuals)
-* all SARS-CoV-2 and COVID endpoints
+* all SARS-CoV-2 endpoints
 
-This is a __case-cohort design__ ([Prentice, 1986](https://www.jstor.org/stable/2336266?seq=1)), a special case of a __two-phase sampling design__ ([Breslow, 2009](https://academic.oup.com/aje/article/169/11/1398/159218)).
-
-* Phase 1: measure baseline variables, vaccine, endpoint __on everyone__
-* Phase 2: given baseline, vaccine, endpoint, select members of __immune response subcohort__ with some (known) probability
+&lt;img src="img/casecohort.png" height="250px" style="display: block; margin: auto;" /&gt;
 
 ---
 
-## Placeholder
+## Statistical challenges
 
-A slide with high-level heuristics about correlates: 
-* causal sufficiency, causal mediation
+__Estimation in two-phase designs__
+
+* Individuals who contract COVID may __differ from other participants__.
+* Two-phase design .red[over-samples] these individuals.
+* Augmented/inverse weighting approaches to __account for differences__.
+
+&lt;br&gt; 
+
+__Low case numbers due to highly effective vaccines__
+
+* Power for CoP analysis driven by __vaccine breakthroughs__.
+* There were .red[only 11 breakthroughs] in Moderna!
+* Need to be __judicious__ in which analyses are performed. 
+* Ultimately, __establishment of correlate__ will need to additionally draw from __other sources of data__.
 
 ---
 
-## Estimation in two-phase designs
+## Transparency and reproducibility
 
-.pull-left[
-* `\(W\)` = baseline covariates
-* `\(A\)` = vaccine assignment
-* `\(Y\)` = COVID endpoint
+__CoVPN statisticians are committed to open science.__
+
+An in-progress, version-controlled SAP is [available](https://figshare.com/articles/online_resource/CoVPN_COVID-19_Vaccine_Efficacy_Trial_Immune_Correlates_SAP/13198595) for review.
+
+An __open-source R package__ is being developed to implement methods involved in the SAP. 
+
+* Reproducible reports using R Markdown
+* Vignettes including analysis of simulated data
+
+Release of package and first correlates reports expected in __early 2021__.
+
+---
+
+## Concluding thoughts
+
+Can we __trust__ the vaccine development process?
+
+* Unequivocally, yes. Safety of vaccines is __aggressively monitored__. 
+
+Efficacy results thus far are __overwhelmingly positive__.
+
+* I am still in shock.
+
+The story is not (close to) over. __There is still much to do and learn__!
+
+* Community outreach/education to increase uptake
+* Durability of vaccines
+* Efficacy against infection/transmissibility
+* Designs when placebo controls are not possible/ethical
+* ...
+
+---
+
+## Amazing statisticians
+
+.pull-left[.tiny[
+__Leadership__
+* Dean Follmann (NIAID)
+* Yonghong Gao (BARDA)
+* Peter Gilbert (FHCRC, UW)
+
+__NIAID__
+* Martha Nason
+* Mike Fay
+* NIAID Biostatistics
+
+__CoVPN__
+* Alex Luedtke (UW)
+* Marco Carone (UW)
+* Iván Díaz (Weill-Cornell)
+* Nima Hejazi (Berkeley)
+* many others!
+
+]]
+
+.pull-right[.tiny[
+__Fred Hutch__
+* Holly Janes
+* Youyi Fong
+* Yunda Huang
+* Michal Juraska
+* Ying Huang
+* Ollivier Hyrien
+* many others!
 ]
-
-.pull-right[
-* `\(\Delta\)` = indicator of being in immune response subcohort
-* `\(\Delta S\)` = measure of immune responses `\(S\)`
 ]
-
-Suppose we are interested in `\(E(S)\)`. Use __Horvitz-Thompson/IPTW estimator__: $$
-\hat{\mu} = \frac{1}{n}\sum_{i=1}^n \frac{\Delta_i}{P(\Delta = 1 \mid W_i, A_i, Y_i)} S_i \ . 
-$$
-
-More efficient to use __augmented estimator__: 
-$$
-\hat{\mu} + \frac{1}{n}\sum_{i=1}^n \left(1 - \frac{\Delta_i}{P(\Delta = 1 \mid W_i, A_i, Y_i)} \right) \hat{E}(S \mid \Delta = 1, A_i, W_i, Y_i) \ . 
-$$
-
-???
-
-Intuition: if `\(Y\)` or `\(W\)` is perfectly predictive of `\(S\)`, then `\(\hat{E}(S \mid \Delta = 1, A_i, W_i, Y_i)\)` is like imputing the true value. So it's like we measured `\(S\)` on more people!
-
-It turns out that consistency of `\(\hat{\mu}\)` is not impacted by model for `\(S\)` -- double robustness.
-
----
-
-## Estimation in two-phase designs
-
-This augmented approach [generalizes](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3083136/). In [Hejazi et al, 2020](https://onlinelibrary.wiley.com/doi/abs/10.1111/biom.13375?af=R) we study $$
-\psi_{\delta} = E[P(Y = 1 \mid A = 1, W, S = S + \delta)] \ .
-$$
-
-With assumptions, `\(\psi_{\delta}\)` = __counterfactual risk__ with vaccine AND `\(\delta\)` change in `\(S\)`. 
-
-.pull-left[
-
-&lt;img src="img/shiftparm.png" height="250px" style="display: block; margin: auto;" /&gt;
-
-]
-
-.pull-right[
-
-* examine over a range of `\(\delta\)` and summarize by projecting onto working model
-
-* compare to risk in placebo for controlled effects-type parameter
-
-]
-
----
-
-## Placeholder
-
-Challenges for correlates in face of highly effective vaccines
-* low case numbers, stability of estimators?
-
-Establishment of correlate will have to draw from NHP studies, natural infection data, other sources.
-
----
-
-## Placeholder
-
-Topics for discussion/open questions:
-* Durability -- will we be able to continue blinded, placebo-controlled follow-up
-  * I'm basically hearing the answer is "No!"
-* Long term safety -- people still seem skeptical of mRNA vaccines wrt long term outcomes
-* Bridging to children
-* Importance of VE against infection
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
