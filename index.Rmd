@@ -385,7 +385,7 @@ __Leadership__
 __NIAID__
 * Martha Nason
 * Mike Fay
-* Prett much all of NIAID Biostatistics
+* Pretty much all of NIAID Biostatistics
 
 __CoVPN__
 * Alex Luedtke (UW)
