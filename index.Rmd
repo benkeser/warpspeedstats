@@ -2,15 +2,12 @@
 title: "At warp speed:"
 subtitle: "Statistics and COVID-19 vaccine development"
 author: "David Benkeser, PhD MPH<br> <span style = 'font-size: 75%;'> Emory University<br> Department of Biostatistics and Bioinformatics </span>"
-date: "`r icon::fa('twitter')` <a href = 'https://twitter.com/biosbenk' style = 'color: white;'>@biosbenk</a> <br> `r icon::fa('github')` <a href = 'https://bit.ly/warpspeedstats' style = 'color: white;'>bit.ly/warpspeedstats</a> <br>"
+date: "<a href = 'https://twitter.com/biosbenk' style = 'color: white;'>@biosbenk</a> <br> <a href='https://bit.ly/warpspeedstats' style='color: white;'>bit.ly/warpspeedstats</a> <br>"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
     nature:
       titleSlideClass: ["center", "middle", "inverse"]
-      highlightStyle: tomorrow-night-blue
-      highlightLanguage: rmarkdown
-      highlightLines: false
 ---
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
@@ -52,6 +49,12 @@ style_mono_accent(
 }
 </style>
 
+## Headline news 
+
+```{r, echo = FALSE, out.height="500px", fig.align="center"}
+knitr::include_graphics("img/headlines.png")
+```
+---
 
 ```{r, echo = FALSE, out.height="575px", fig.align="center"}
 knitr::include_graphics("img/owsprocess.jpeg")
@@ -272,7 +275,7 @@ knitr::include_graphics("img/cor1.png")
 knitr::include_graphics("img/cor2.png")
 ```
 
-* Machine learning prediction using different sets of immune responses\*.
+* Machine learning prediction using different sets of immune responses.\*
 
 ]
 
@@ -382,7 +385,7 @@ __Leadership__
 __NIAID__
 * Martha Nason
 * Mike Fay
-* NIAID Biostatistics
+* Prett much all of NIAID Biostatistics
 
 __CoVPN__
 * Alex Luedtke (UW)
@@ -402,5 +405,8 @@ __Fred Hutch__
 * Ying Huang
 * Ollivier Hyrien
 * many others!
+
+__OWS Company statisticians__
+* Too many to name!
 ]
 ]
