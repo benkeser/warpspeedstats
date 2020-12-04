@@ -147,7 +147,7 @@ knitr::include_graphics("img/endpt.png")
 
 <br>
 
-.small[[Mehrotra et al (2020)](https://www.doi.org/10.7326/M20-6169)]
+.small[Figure from [Mehrotra et al (2020)](https://www.doi.org/10.7326/M20-6169)]
 
 ---
 
@@ -165,6 +165,10 @@ __Severe COVID__
 * .blue2[+] most clinically relevant, a-priori highest expected efficacy
 * .red[-] very few cases expected to be observed, longer evaluation needed
 
+<br>
+
+.small[[Mehrotra et al (2020)](https://www.doi.org/10.7326/M20-6169)]
+
 ---
 
 ## What is the most relevant endpoint?
@@ -178,6 +182,8 @@ __Burden of disease (BOD)__
 ```{r, echo = FALSE, out.height="250px", fig.align="center"}
 knitr::include_graphics("img/bodpower.png")
 ```
+
+.small[[Mehrotra et al (2020)](https://www.doi.org/10.7326/M20-6169)]
 
 ---
 
